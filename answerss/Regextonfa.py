@@ -218,10 +218,15 @@ def api_call(str):
     tran = nfa.transition_function
     start = nfa.start_state
     final = nfa.final_states
-    nfa.states=[]
-    nfa.letters=[]
-    nfa.transition_function=[]
-    nfa.start_state="S1"
-    nfa.final_states=[]
-    return (st, let, tran, start, final)
-    
+    nfa.states = []
+    nfa.letters = []
+    nfa.transition_function = []
+    nfa.start_state = "S1"
+    nfa.final_states = []
+    return (
+        f"States: {st}",
+        f"Letters: {let}",
+        f"Transitions:{tran}",
+        f"Start State: {start}",
+        f"Final States: {final}",
+    )
