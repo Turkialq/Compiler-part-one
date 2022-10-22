@@ -2,6 +2,7 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from answerss.questiontwo import api_call
 from answerss.Regextonfa import api_call
+from answerss.questionthree import regexToDFA
 
 
 @api_view(["post"])
@@ -17,5 +18,5 @@ def nfa_to_dfa(request):
 
 @api_view(["post"])
 def regex_to_dfa(request):
-    person = {"Question": "3"}
-    return Response(person)
+
+    return Response(regexToDFA(request.body))
